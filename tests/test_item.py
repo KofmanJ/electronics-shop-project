@@ -36,3 +36,11 @@ def test_name_setter():
 
     item.name = 'СуперСмартфон'
     assert item.name != 'СуперСмар'
+
+def test_repr():
+    item = Item("Телефон", 15000, 30)
+    assert item.__repr__() == "Item('Телефон', 15000, 30)"
+
+def test_str():
+    item = Item("Телефон", 15000, 30)
+    assert item.__str__() == "Телефон"
