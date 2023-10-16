@@ -44,3 +44,7 @@ def test_repr():
 def test_str():
     item = Item("Телефон", 15000, 30)
     assert item.__str__() == "Телефон"
+
+def test_add():
+    item = Item("Телефон", 15000, 30)
+    assert item + item == 60
