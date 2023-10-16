@@ -67,3 +67,8 @@ class Item:
         """
         self.price = self.price * self.pay_rate
         return self.price
+
+    def __add__(self, other):
+        if isinstance(other, Item):
+            return self.quantity + other.quantity
+        raise ValueError('Складывать можно только объекты Item и дочерние от них.')
