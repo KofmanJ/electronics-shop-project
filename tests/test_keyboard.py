@@ -7,3 +7,5 @@ def test_1():
     assert str(new_test.language) == "EN"
     new_test.change_lang()
     assert str(new_test.language) == "RU"
+    new_test.change_lang()
+    assert str(new_test.language) == "EN"
